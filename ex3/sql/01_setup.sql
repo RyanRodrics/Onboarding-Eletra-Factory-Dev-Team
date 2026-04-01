@@ -4,7 +4,7 @@ CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;
 -- 2. Criação da tabela base, que armazena os dados dos sensores
 CREATE TABLE sensor_data (
     id BIGSERIAL,
-    sensor_id TEXT NOT NULL,
+    sensor_id BIGINT NOT NULL,
     time TIMESTAMPTZ NOT NULL,
     temperature DOUBLE PRECISION,
     humidity DOUBLE PRECISION,

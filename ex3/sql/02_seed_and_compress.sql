@@ -13,7 +13,7 @@ SET timescaledb.enable_direct_compress_insert = on;
 -- 4. Seed de Dados: Simula leituras de 10 sensores a cada 1 minuto nos últimos 7 dias
 INSERT INTO sensor_data (sensor_id, time, temperature, humidity, pressure)
 SELECT
-    'sensor_' || ((random() * 9)::int + 1) AS sensor_id,
+    ((random() * 9)::int + 1) AS sensor_id,
     time,
     20 + (random() * 15) AS temperature,
     40 + (random() * 30) AS humidity,
