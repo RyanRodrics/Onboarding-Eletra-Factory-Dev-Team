@@ -54,6 +54,6 @@ public class Box {
     @Column(nullable = false)
     private LocalDateTime dateEdit;
 
-    @OneToMany(mappedBy = "box", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "box", fetch = FetchType.LAZY)
     private List<Meter> boxMeters;
 }
